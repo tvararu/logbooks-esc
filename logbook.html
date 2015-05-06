@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="bower_components/normalize.css/normalize.css">
+    <style>
+      body {
+        color: #3A3A3A;
+        font-weight: 400;
+        font-family: "Open Sans";
+        font-size: 16px;
+        line-height: 1.25;
+        margin: 0 auto;
+        padding: 20px;
+        width: 800px;
+      }
+      h1, h2, h3, p {
+        margin: 0;
+      }
+      h1 {
+        font-size: 2em;
+        margin: 20px 0;
+        padding-top: 20px;
+      }
+      h2 {
+        font-size: 1.5em;
+        line-height: 40px;
+        margin: 20px 0;
+      }
+      h3 {
+        font-size: 1.25em;
+        line-height: 40px;
+      }
+      p {
+        margin: 20px 0;
+      }
+      pre {
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+        background: white;
+        color: #383F56;
+        margin: 20px 0;
+        padding: 20px;
+      }
+      pre, code {
+        font-family: "Courier New";
+        word-wrap: break-word;
+      }
+      pre .kw {
+        font-weight: 600;
+      }
+      pre .co {
+        color: rgba(255, 255, 255, 0.5);
+      }
+      blockquote {
+        border-left: 5px solid #383F56;
+        margin-left: 0;
+        padding-left: 15px;
+      }
+      hr {
+        border-top-width: 1px;
+        border-color: #383F56;
+        margin: 19px 0;
+      }
+      table th, table td {
+        padding: 10px 5px;
+      }
+      table th:first-child, table td:first-child {
+        padding-left: 0;
+      }
+      @media print {
+        h1 {
+          page-break-before: always;
+        }
+      }
+      ul {
+        margin: 20px 0;
+      }
+      ul.unstyled {
+        list-style-type: none;
+        padding: 0;
+      }
+      ul.unstyled li {
+        margin: 20px 0;
+      }
+      .cover h2 {
+        font-weight: 300;
+      }
+      a:visited, a:focus {
+        color: inherit;
+      }
+    </style>
+  </head>
+  <body>
+  <div class="cover">
+    <h2>Logbook - Engineering Software C++</h2>
+    <h2>Theodor Vararu - 3329393</h2>
+    <ul class="unstyled">
+      <li>Lab 1 - Page 2</li>
+      <li>Lab 2 - Page 16</li>
+      <li>Lab 3 - Page 21</li>
+      <li>Lab 4 - Page 27</li>
+      <li>Lab 5 - Page 30</li>
+      <li>Lab 6 - Page 36</li>
+      <li>Lab 7 - Page 37</li>
+    </ul>
+    <p>Source code at <a href="https://github.com/tvararu/logbooks-esc">https://github.com/tvararu/logbooks-esc</a>.</p>
+  </div>
+<h1 id="chapter-1">Chapter 1</h1>
+<h2 id="exercises">1.6 Exercises</h2>
+<ol style="list-style-type: decimal">
+<li>The functional decompositional method consists of breaking down tasks into smaller tasks.</li>
+<li>Functional programming is a way of describing processes as small reusable functions rather than monolithic procedural blocks.</li>
+<li>C and C++ are both compiled programming languages for use in creating software.</li>
+<li>Data, algorithms, and program syntax.</li>
+</ol>
+<h1 id="chapter-2">Chapter 2</h1>
+<h2 id="exercises-1">2.8 Exercises</h2>
+<ol style="list-style-type: decimal">
+<li>The <code>main()</code> function.</li>
+<li><code>std::cout &lt;&lt; &quot;I am learning how to write programs in C.&quot;;</code>.</li>
+<li><code>std::cout &lt;&lt; &quot;I am learning how to write programs in C.\nMeanwhile I am learning how to write programs in C++.&quot;;</code>.</li>
+<li><code>std::cout &lt;&lt; &quot;I am learning how to write programs in C.\nMeanwhile I am learning how to write programs in C++.\a\a\a&quot;;</code>.</li>
+<li><code>r = PI / 2 + 1; area = PI * r * r;</code>.</li>
+<li>The first is a post-increment, the second is a pre-increment. Post-increment returns the value and then increments the number, while pre-increment increments the number and then returns the incremented value.</li>
+<li>It will output 3, 3, 4, 4, 5, 5, 6.</li>
+<li>It will output 3, 4, 4, 5, 5, 6, 6.</li>
+<li><code>cout &lt;&lt; &quot;THEODOR&quot;;</code>.</li>
+<li>The quotient 40 and it's because C performs type casting. For a more accurate result, the numbers can be coerced to float: <code>(float)(201) / (float)(5)</code>.</li>
+<li><code>333.3 % 5</code> is <code>3.3</code>.</li>
+<li><code>3 % 2</code> is <code>1</code>, quotient is 1. <code>1 % 4</code> is <code>1</code>, quotient 0. Result is <code>11</code>.</li>
+</ol>
+<h1 id="chapter-3">Chapter 3</h1>
+<h2 id="exercises-2">3.6 Exercises</h2>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Exercise 1.</span>
+<span class="ot">#include &lt;iostream&gt;</span>
+
+<span class="dt">int</span> main() {
+    <span class="dt">int</span> a, b;
+    std::cin &gt;&gt; a &gt;&gt; b;
+    std::cout &lt;&lt; <span class="st">&quot;The larger number is: &quot;</span> &lt;&lt; (a &gt; b) ? a : b;
+    <span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Exercise 2.</span>
+<span class="kw">if</span> (a == b) {
+    std::cout &lt;&lt; <span class="st">&quot;The numbers are equal!&quot;</span>;
+} <span class="kw">else</span> {
+    std::cout &lt;&lt; <span class="st">&quot;The larger number is: &quot;</span> &lt;&lt; (a &gt; b) ? a : b;
+}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Exercise 3.</span>
+<span class="ot">#include &lt;iostream&gt;</span>
+
+<span class="dt">int</span> main() {
+    <span class="dt">int</span> a;
+    std::cin &gt;&gt; a;
+
+    <span class="kw">switch</span> (a) {
+        <span class="kw">case</span> <span class="dv">1</span>:
+            std::cout &lt;&lt; <span class="st">&quot;I&quot;</span>;
+        <span class="kw">case</span> <span class="dv">5</span>:
+            std::cout &lt;&lt; <span class="st">&quot;V&quot;</span>;
+        <span class="kw">case</span> <span class="dv">10</span>:
+            std::cout &lt;&lt; <span class="st">&quot;X&quot;</span>;
+        <span class="kw">case</span> <span class="dv">50</span>:
+            std::cout &lt;&lt; <span class="st">&quot;L&quot;</span>;
+        <span class="kw">case</span> <span class="dv">100</span>:
+            std::cout &lt;&lt; <span class="st">&quot;C&quot;</span>;
+        <span class="kw">case</span> <span class="dv">500</span>:
+            std::cout &lt;&lt; <span class="st">&quot;D&quot;</span>;
+        <span class="kw">case</span> <span class="dv">1000</span>:
+            std::cout &lt;&lt; <span class="st">&quot;M&quot;</span>;
+    }
+
+    <span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Exercise 4.</span>
+<span class="ot">#include &lt;iostream&gt;</span>
+
+<span class="dt">int</span> main() {
+    <span class="dt">int</span> a;
+    std::cin &gt;&gt; a;
+
+    <span class="kw">if</span> (a &lt; <span class="dv">40</span>) {
+        std::cout &lt;&lt; <span class="st">&quot;Fail&quot;</span>;
+    } <span class="kw">else</span> <span class="kw">if</span> (a &lt; <span class="dv">60</span>) {
+        std::cout &lt;&lt; <span class="st">&quot;Pass&quot;</span>;
+    } <span class="kw">else</span> <span class="kw">if</span> (a &lt; <span class="dv">75</span>) {
+        std::cout &lt;&lt; <span class="st">&quot;Merit&quot;</span>;
+    } <span class="kw">else</span> {
+        std::cout &lt;&lt; <span class="st">&quot;Distinction&quot;</span>;
+    }
+
+    <span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre></div>
+<p>Exercise 5.</p>
+<ul>
+<li>Mon: game.</li>
+<li>Tue: read.</li>
+<li>Wed: party.</li>
+<li>Thu: write.</li>
+<li>Fri: sport.</li>
+<li>Sat: read.</li>
+<li>Sun: read.</li>
+</ul>
+<p>6.a: No quotes.</p>
+<p>6.b: No double equals.</p>
+<p>6.c: 5.</p>
+<p>6.d: &quot;i != 0&quot;</p>
+<h1 id="chapter-4">Chapter 4</h1>
+<h2 id="exercises-3">4.6 Exercises</h2>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Exercise 1.</span>
+<span class="ot">#include &lt;iostream&gt;</span>
+<span class="kw">using</span> <span class="kw">namespace</span> std;
+
+<span class="dt">int</span> main() {
+    <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">1</span>; i &lt;= <span class="dv">9</span>; i++) {
+        cout &lt;&lt; <span class="st">&#39;*&#39;</span>;
+    }
+
+    <span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Exercise 2.</span>
+<span class="ot">#include &lt;iostream&gt;</span>
+<span class="kw">using</span> <span class="kw">namespace</span> std;
+
+<span class="dt">int</span> main() {
+    <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">1</span>; i &lt;= <span class="dv">9</span>; i++) {
+        cout &lt;&lt; i &lt;&lt; <span class="st">&#39; &#39;</span>;
+    }
+
+    <span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Exercise 3.</span>
+<span class="ot">#include &lt;iostream&gt;</span>
+<span class="kw">using</span> <span class="kw">namespace</span> std;
+
+<span class="dt">int</span> main() {
+    <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">1</span>; i &lt;= <span class="dv">9</span>; i++) {
+        cout &lt;&lt; <span class="st">&#39;*&#39;</span> &lt;&lt; <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>;
+    }
+
+    <span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Exercise 4.</span>
+<span class="ot">#include &lt;iostream&gt;</span>
+<span class="kw">using</span> <span class="kw">namespace</span> std;
+
+<span class="dt">int</span> main() {
+    <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">1</span>; i &lt;= <span class="dv">9</span>; i++) {
+        cout &lt;&lt; i &lt;&lt; <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>;
+    }
+
+    <span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Exercise 5.</span>
+<span class="ot">#include &lt;iostream&gt;</span>
+<span class="kw">using</span> <span class="kw">namespace</span> std;
+
+<span class="dt">int</span> main() {
+    <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">1</span>; i &lt;= <span class="dv">9</span>; i++) {
+        <span class="kw">for</span> (<span class="dt">int</span> j = <span class="dv">1</span>; j &lt;= <span class="dv">9</span>; j++) {
+            cout &lt;&lt; <span class="st">&#39;*&#39;</span>;
+        }
+        cout &lt;&lt; <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>;
+    }
+
+    <span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Exercise 6.</span>
+<span class="ot">#include &lt;iostream&gt;</span>
+<span class="kw">using</span> <span class="kw">namespace</span> std;
+
+<span class="dt">int</span> main() {
+    <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">1</span>; i &lt;= <span class="dv">9</span>; i++) {
+        <span class="kw">for</span> (<span class="dt">int</span> j = <span class="dv">1</span>; j &lt;= <span class="dv">9</span>; j++) {
+            cout &lt;&lt; i;
+        }
+        cout &lt;&lt; <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>;
+    }
+
+    <span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Exercise 7.</span>
+<span class="ot">#include &lt;iostream&gt;</span>
+<span class="kw">using</span> <span class="kw">namespace</span> std;
+
+<span class="dt">int</span> main() {
+    <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">1</span>; i &lt;= <span class="dv">9</span>; i++) {
+        <span class="kw">for</span> (<span class="dt">int</span> j = <span class="dv">1</span>; j &lt;= i; j++) {
+            cout &lt;&lt; <span class="st">&#39;*&#39;</span>;
+        }
+        cout &lt;&lt; <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>;
+    }
+
+    <span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Exercise 8.</span>
+<span class="ot">#include &lt;iostream&gt;</span>
+<span class="kw">using</span> <span class="kw">namespace</span> std;
+
+<span class="dt">int</span> main() {
+    <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">1</span>; i &lt;= <span class="dv">9</span>; i++) {
+        <span class="kw">for</span> (<span class="dt">int</span> j = <span class="dv">1</span>; j &lt;= i; j++) {
+            cout &lt;&lt; i;
+        }
+        cout &lt;&lt; <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>;
+    }
+
+    <span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Exercise 9.</span>
+<span class="ot">#include &lt;iostream&gt;</span>
+<span class="kw">using</span> <span class="kw">namespace</span> std;
+
+<span class="dt">int</span> main() {
+    <span class="dt">int</span> mid = <span class="dv">5</span>;
+    <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; mid; i++) {
+        <span class="kw">for</span> (<span class="dt">int</span> j = <span class="dv">1</span>; j &lt;= <span class="dv">9</span>; j++) {
+            <span class="dt">int</span> lo = mid - i;
+            <span class="dt">int</span> hi = mid + i;
+            <span class="kw">if</span> (j &gt;= lo || j &lt;= hi) {
+                cout &lt;&lt; <span class="st">&#39;*&#39;</span>;
+            } <span class="kw">else</span> {
+                cout &lt;&lt; <span class="st">&#39; &#39;</span>;
+            }
+            cout &lt;&lt; i;
+        }
+        cout &lt;&lt; <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>;
+    }
+
+    <span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Exercise 10.</span>
+<span class="ot">#include &lt;iostream&gt;</span>
+<span class="kw">using</span> <span class="kw">namespace</span> std;
+
+<span class="dt">int</span> main() {
+    <span class="dt">int</span> mid = <span class="dv">5</span>;
+    <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; mid; i++) {
+        <span class="kw">for</span> (<span class="dt">int</span> j = <span class="dv">1</span>; j &lt;= <span class="dv">9</span>; j++) {
+            <span class="dt">int</span> lo = mid - i;
+            <span class="dt">int</span> hi = mid + i;
+            <span class="kw">if</span> (j &gt;= lo || j &lt;= hi) {
+                cout &lt;&lt; i;
+            } <span class="kw">else</span> {
+                cout &lt;&lt; <span class="st">&#39; &#39;</span>;
+            }
+            cout &lt;&lt; i;
+        }
+        cout &lt;&lt; <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>;
+    }
+
+    <span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Exercise 11.</span>
+<span class="ot">#include &lt;iostream&gt;</span>
+<span class="kw">using</span> <span class="kw">namespace</span> std;
+
+<span class="dt">int</span> main() {
+    <span class="dt">int</span> sum = <span class="dv">0</span>;
+    <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">100</span>; i &lt; <span class="dv">1000</span>; i += <span class="dv">2</span>) {
+        sum += i;
+    }
+    cout &lt;&lt; sum;
+
+    <span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre></div>
+<h1 id="chapter-5">Chapter 5</h1>
+<h2 id="exercises-4">5.6 Exercises</h2>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Exercise 1.</span>
+<span class="ot">#include &lt;iostream&gt;</span>
+<span class="kw">using</span> <span class="kw">namespace</span> std;
+
+<span class="dt">int</span> main() {
+  <span class="dt">double</span> a;
+  cin &gt;&gt; a;
+  cout &lt;&lt; PI / <span class="dv">180</span> * a &lt;&lt; endl;
+
+  <span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Exercise 2.</span>
+<span class="ot">#include &lt;iostream&gt;</span>
+<span class="ot">#include &lt;cmath&gt;</span>
+<span class="kw">using</span> <span class="kw">namespace</span> std;
+
+<span class="dt">int</span> main() {
+  <span class="dt">double</span> a;
+  cin &gt;&gt; a;
+  cout &lt;&lt; sin(a) &lt;&lt; endl;
+  cout &lt;&lt; cos(a) &lt;&lt; endl;
+
+  <span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Exercise 3.</span>
+<span class="ot">#include &lt;iostream&gt;</span>
+<span class="ot">#include &lt;cmath&gt;</span>
+<span class="kw">using</span> <span class="kw">namespace</span> std;
+
+<span class="dt">int</span> main() {
+  <span class="dt">double</span> a;
+  cin &gt;&gt; a;
+  cout &lt;&lt; tan(a) &lt;&lt; endl;
+
+  <span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre></div>
+<p>For exercise 4, the program will output 232.053 and then 232.</p>
+<h1 id="chapter-6">Chapter 6</h1>
+<h2 id="exercises-5">6.10 Exercises</h2>
+<p>Q1: a[3] is the null terminator.</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Exercise 2.</span>
+<span class="ot">#include &lt;iostream&gt;</span>
+<span class="kw">using</span> <span class="kw">namespace</span> std;
+
+<span class="dt">int</span> main() {
+  <span class="dt">int</span> sum = <span class="dv">0</span>;
+  <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">1</span>; i &lt;= <span class="dv">100</span>; i++) {
+    sum += i;
+  }
+  cout &lt;&lt; sum;
+
+  <span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Exercise 3, 4, 5, 6.</span>
+<span class="ot">#include &lt;iostream&gt;</span>
+<span class="kw">using</span> <span class="kw">namespace</span> std;
+
+<span class="dt">void</span> ConvertToBinary(<span class="dt">int</span> n) {
+  <span class="kw">if</span> (n / <span class="dv">2</span> != <span class="dv">0</span>) {
+    ConvertToBinary(n / <span class="dv">2</span>);
+  }
+  printf(<span class="st">&quot;</span><span class="ch">%d</span><span class="st">&quot;</span>, n % <span class="dv">2</span>);
+}
+
+<span class="dt">int</span> main() {
+  <span class="dt">int</span> a = <span class="dv">4</span>;
+  ConvertToBinary(a);
+
+  <span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre></div>
+<h1 id="chapter-7">Chapter 7</h1>
+<h2 id="exercises-6">7.6 Exercises</h2>
+<p>Q1: The first is a pointer declaration, the second a dereference.</p>
+<h1 id="chapter-8">Chapter 8</h1>
+<h2 id="exercises-7">8.10 Exercises</h2>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Exercise 1.</span>
+<span class="ot">#include &lt;iostream&gt;</span>
+<span class="ot">#include &lt;string&gt;</span>
+<span class="kw">using</span> <span class="kw">namespace</span> std;
+
+string readName() {
+  string buf;
+  cin &gt;&gt; buf;
+  <span class="kw">return</span> buf;
+}
+
+<span class="dt">int</span> main() {
+  string name = readName();
+
+  cout &lt;&lt; name &lt;&lt; endl;
+
+  <span class="kw">return</span> <span class="dv">0</span>;
+}</code></pre></div>
+  </body>
+</html>
